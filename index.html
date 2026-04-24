@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1>Data Kelas</h1>
+
+            <section class="form-card" id="formSection">
+                <h2 id="formTitle">Tambah Data Siswa</h2>
+                <form id="siswaForm">
+                    <input type="hidden" id="siswaId" name="id">
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="nama_kelas">Nama Kelas</label>
+                            <input type="text" id="nama_kelas" name="nama_kelas" placeholder="Contoh: XII RPL 1" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="jurusan">Jurusan</label>
+                            <input type="text" id="jurusan" name="jurusan" placeholder="Contoh: Rekayasa Perangkat Lunak" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lokasi_ruangan">Lokasi Ruangan</label>
+                            <input type="text" id="lokasi_ruangan" name="lokasi_ruangan" placeholder="Contoh: Gedung A - 203" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="wali_kelas">Wali Kelas</label>
+                            <input type="text" id="wali_kelas" name="wali_kelas" placeholder="Contoh: Ibu Sinta" required>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-success" id="submitButton">Simpan Data</button>
+                        <button type="button" class="btn btn-secondary hidden" id="cancelButton" onclick="cancelEdit()">Batal Edit</button>
+                    </div>
+                </form>
+                <p id="formMessage" class="form-message hidden"></p>
+            </section>
+
+            <div class="toolbar">
+                <button class="btn btn-success" onclick="goToAddForm()">+ Tambah Data</button>
+            </div>
+
+            <table class="table" border="2">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama Kelas </th>
+                        <th>Jurusan</th>
+                        <th>Lokasi Ruangan</th>
+                        <th>Wali Kelas</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+</html>
